@@ -1,0 +1,449 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/generallayout.cshtml";
+    <style>
+        .a {
+        }
+
+            .a:hover {
+                background: black;
+                color: white;
+            }
+    </style>
+}
+<div class="row m-2" style="max-height:500px">
+
+    <div class="col-lg-7" style="min-height:500px">
+        <!--start slider-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Content/img/s1.jpg" style="height:500px" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/fruit-allsorts-pineapple-melon-wallpaper-preview.jpg" style="height:500px" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/s2.jpg" style="height:500px" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--end slider-->
+
+
+    <div class="col-5 p-4" style="min-height:500px">
+
+        <marquee direction="up" behavior="alternate" scrollamount="10" style="height:450px" onmouseover="stop()" onmouseleave="start()">
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="card mb-3" style="max-width:500px; max-height:200px">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="~/Content/img/s6.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">FRUITS</h5>
+                                    <p class="card-text">ALL BEST AND FRESH VEGETABLE </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 ">
+
+                    <div class="card mb-3" style="max-width:500px; max-height:200px">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="~/Content/img/s2.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">FRUITS</h5>
+                                    <p class="card-text">ALL BEST AND FRESH VEGETABLE </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 ">
+
+                    <div class="card mb-3" style="max-width:500px; max-height:200px">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="~/Content/img/s3.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">FRUITS</h5>
+                                    <p class="card-text">ALL BEST AND FRESH VEGETABLE </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </marquee>
+    </div>
+
+</div>
+@*START CATEGORY*@
+<br />
+<br />
+<div class="row">
+    @{
+        if (ViewBag.category != null)
+        {
+            foreach (var cat in ViewBag.category.Rows)
+            {
+                <div class="col-sm-1" style="width:150px">
+                    <div class="card p-2">
+                        <img class="card-img-top" src="~/Content/caticon/@cat[2]" style="height:90px; width:100%" />
+                        <div class="card-body">
+                            <b> <p class="card-text text-center">@cat[1]</p></b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+        }
+    }
+
+
+
+</div>
+<br />
+<br />
+@*END CATEGORY*@
+<!--start cards-->
+<div class="row" style="min-height: 300px">
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+
+        <div class="card" style=" height:300px;width: 230px;">
+            <img src="~/Content/img/s3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+                <s class="text-danger">200-/</s> <b class="text-success">90-/</b><br />
+
+
+                <a href="#" class="btn btn-primary">visit for more</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+        <div class="card" style="height:300px;width: 230px;">
+            <img src="~/Content/img/s4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+                <s class="text-danger">200-/</s> <b class="text-success">90-/</b><br />
+
+
+                <a href="#" class="btn btn-primary">visit for more</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+
+        <div class="card" style="height:300px;width: 230px;">
+            <img src="~/Content/img/s5.jpg" style="height:150px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+
+                <s class="text-danger">200-/</s> <b class="text-success">90-/</b><br />
+
+                <a href="#" class="btn btn-primary">visit for more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+        <div class="card" style="height:300px;width: 240px;">
+            <img src="~/Content/img/s6.jpg" style="height:150px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+                <s class="text-danger">200-/</s> <b class="text-success">90-/</b><br />
+
+
+                <a href="#" class="btn btn-primary">visit for more</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+
+        <div class="card" style="height:300px;width: 230px;">
+            <img src="~/Content/img/s1.jpg" style="height:150px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+                <s class="text-danger">200-/</s> <b class="text-success">90-/</b><br />
+
+
+                <a href="#" class="btn btn-primary">visit for more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6  col-sm-12-">
+
+        <div class="card" style="height:300px;width: 230px;">
+            <img src="~/Content/img/s2.jpg" style="height:150px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4>items</h4>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i>
+                <i class="fa-solid fa-star text-warning"></i><br />
+                <s class="text-danger">200-/</s> <b class="text-success">90-/ </b>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <br />
+
+
+                <a href="#" class="btn btn-primary ">Visit for more</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br /><br />
+
+
+<!--endcards-->
+<!--start maximum 12 product-->
+<div class="text-center fs-3">Today's <b class="text-warning">Deal</b></div>
+@*Start arrival *@
+<div class="row py-2">
+
+    @{
+        if (ViewBag.product1 != null)
+        {
+            foreach (var p1 in ViewBag.product1.Rows)
+            {
+
+
+
+                <div class="col-lg-2 col-md-4 col-sm-12 py-2">
+                        <div class="card mb-3 " style="height:350px;width:200px;">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    @p1[11]%
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            <img src="~/Content/productpic/@p1[9]" style="min-height:120px;width:100px" class="card-img-top mx-4" />
+                            <b>@p1[3]</b>
+                            <div class="card-body ">
+                                <b class="text-warning">@p1[8]</b> <br />
+                                <span class="text-end"></span>
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                <s class="text-danger">@p1[6]-/</s>&nbsp;&nbsp;&nbsp;<b class="text-success">@p1[7]-/</b><br />
+
+                                <form action="/home/addtocart" method="post">
+                                <input type="hidden" name="salerate" value="@p1[7]"/>
+                                <input type="hidden" name="pid" value="@p1[0]"/>
+
+
+                                <div class="input-group">
+                                    <b class="input-group-text" onclick="pFun(@p1[0])"><i class=" a fa-solid fa-plus"></i></b>
+                                    <input name="quantity" type="text" id="txtcard_@p1[0]" class="  form-control text-center fs-5" value="0" />
+                                    <b class="input-group-text" onclick="mFun(@p1[0])"><i class="a fa-solid fa-minus"></i></b>
+                                </div><br />
+                                <input type="submit" value="Add to cart" class=" text-light btn bg-primary" style="width:90%" />
+                               </form>
+                            </div>
+                        </div>
+
+                </div>
+
+            }
+        }
+    }
+
+
+
+</div>
+
+<!---end arrival-->
+
+<div class="text-center fs-3">Today's <b class="text-warning">Deal</b></div>
+@*Start product*@
+<div class="row py-2">
+
+    @{
+        if (ViewBag.product2 != null)
+        {
+            foreach (var p1 in ViewBag.product2.Rows)
+            {
+
+
+
+                <div class="col-lg-2 col-md-4 col-sm-12 py-2">
+                    <div class="card mb-3 " style="height:350px;width:200px;">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            @p1[11]%
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                        <img src="~/Content/productpic/@p1[9]" style="min-height:120px;width:100px" class="card-img-top mx-4" />
+                        <b>@p1[3]</b>
+                        <div class="card-body ">
+                            <b class="text-warning">@p1[8]</b> <br />
+                            <span class="text-end"></span>
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <s class="text-danger">@p1[6]-/</s>&nbsp;&nbsp;&nbsp;<b class="text-success">@p1[7]-/</b><br />
+
+                            <form action="/home/addtocart" method="post">
+                                <input type="hidden" name="salerate" value="@p1[7]" />
+                                <input type="hidden" name="pid" value="@p1[0]" />
+
+
+                                <div class="input-group">
+                                    <b class="input-group-text" onclick="pFun(@p1[0])"><i class="a fa-solid  fa-plus"></i></b>
+                                    <input name="quantity" type="text" id="txtcard_@p1[0]" class="  form-control text-center fs-5" value="0" />
+                                    <b class="input-group-text" onclick="mFun(@p1[0])"><i class=" a fa-solid fa-minus"></i></b>
+                                </div><br />
+                                <input type="submit" value="Add to cart" class=" text-light btn bg-primary" style="width:90%" />
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        }
+    }
+
+
+
+</div>
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+
+    $
+
+
+    var i = 0
+    function pFun(id)
+    {
+        var t = document.getElementById("txtcard_" + id)
+        i = t.value;
+        i++;
+        t.value = i
+    
+    }
+    function mFun(id)
+    {
+        var t = document.getElementById("txtcard_" + id)
+        if (i > 0)
+        {
+            i--;
+            t.value = i;
+        }
+    }
+
+
+    function p1Fun(id) {
+        var t = document.getElementById("txtcard1_" + id)
+        i = t.value;
+        i++;
+        t.value = i
+
+    }
+    function m1Fun(id) {
+        var t = document.getElementById("txtcard1_" + id)
+        if (i > 0) {
+            i--;
+            t.value = i;
+        }
+    }
+
+</script>
+@*End product*@
+
+<br />
+<br />
+<br />
+
+<div class="text-center"> <h2>PRODUCT <b class="text-warning">SERVICES </b></h2> </div>
+<br />
+<br />
+
+<div class="row text-center">
+    <div class="col-sm-3">
+        <img src="~/Content/services/store.png" style="height:50px" /><br>
+        <h4>FASTEST SHOP</h4><br />78qwdsaxz
+        best shop in our area here we increase the quality of product and the offline shop is near imiliya road belthara road ballia.
+        <br>
+
+
+    </div>
+    <div class="col-sm-3">
+        <img src="~/Content/services/fast-delivery.png" style="height:50px" />
+        <br /><h4>FASTEST DELIVERY</h4><br>best delivery available here and we use best type of vihacle for delivary .
+    </div>
+    <div class="col-sm-3">
+        <img src="~/Content/services/high-quality.png" style=" height:50px" />
+        <br /><h4>BEST QUALITY</h4><br>best quality are available here and we provide you a best item for the needs
+    </div>
+
+    <div class="col-sm-3">
+        <img src="~/Content/services/payment-gateway.png" style="height:50px" />
+        <br /><h4>SECURE PAYMENT</h4><br>best and secure payment available here and we use best type of services for delivary .
+    </div>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
